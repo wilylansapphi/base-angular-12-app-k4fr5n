@@ -1,0 +1,11 @@
+<div *ngFor="let option of options">
+  <ng-container
+    [ngTemplateOutlet]="tuile"
+    [ngTemplateOutletContext]="{ $implicit: option }"
+  >
+  </ng-container>
+</div>
+
+<ng-template #tuile let-option>
+  <div>{{ option.name }} : {{ option.id }}</div>
+</ng-template>
